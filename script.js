@@ -87,3 +87,27 @@ while (collectEmployees) {
   collectEmployees = confirm('Add another employee?');
 }
 
+if (employees.length === 0) {
+  alert('No employees added.');
+}
+
+if collectEmployees = {confirm('Add another employee?');
+    return employees;
+    }
+
+    const index = Math.floor(Math.random() * employees.length);
+    const randomEmployee = employees[index];
+    
+    window.alert(`Random employee: ${randomEmployee.firstName} ${randomEmployee.lastName}`);
+
+    const displayAverageSalary = function(employeesArray) {
+      let totalSalary = 0;
+      for (let i = 0; i < employeesArray.length; i++) {
+        totalSalary += employeesArray[i].salary;
+      }
+      const averageSalary = totalSalary / employeesArray.length;
+      window.alert(`Average salary: ${averageSalary.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      })}`);
+    }
