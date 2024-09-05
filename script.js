@@ -63,3 +63,27 @@ displayEmployees(employees);
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
 
 //Student code Below
+const addEmployeesBTn = document.querySelector('#add-employees-btn');
+   addEmployeesBTn.addEventListener('click', collectEmployees);
+
+const collectEmployees = function() {
+  const firstName = prompt('Enter employee first name:');
+  const lastName = prompt('Enter employee last name:');
+  const salary = prompt('Enter employee salary:');
+
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    salary: salary,
+  };
+}
+
+let collectEmployees = windowprompt('Add an employee?');
+
+while (collectEmployees) {
+  const newEmployee = collectEmployees();
+  employees.push(newEmployee);
+
+  collectEmployees = confirm('Add another employee?');
+}
+
